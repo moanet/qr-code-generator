@@ -130,7 +130,7 @@ qr-code-generator/
 - **原生 HTML / CSS / JS**：无框架、无构建步骤、无 npm 依赖。
 - **Canvas 2D 自绘码点**：以「整格 × 整数倍」计算像素，避免半像素导致的模糊与缝隙；圆角样式对三个定位眼单独绘制圆角环与中心圆点。
 - **SVG 逐模块输出**：1 个模块 = 1 个坐标单位，印刷时无锯齿；方形样式使用 `crispEdges` 并让相邻矩形轻微重叠，消除模块间的细缝。
-- **内联编码库**：Kazuhiko Arase 的 [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) 1.4.4（MIT），启用 UTF-8 字节模式。
+- **内联编码库**：[Kazuhiko Arase](https://github.com/kazuhikoarase) 的 [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) 1.4.4（MIT），启用 UTF-8 字节模式。
 - **中心叠加**：文字按最大宽度与最大高度双重约束自动缩放；图片等比缩放并置于圆角底板，避免遮挡过多码区。
 - **响应式布局**：桌面为「控制面板 + 固定预览」，窄屏自动改为预览置顶。
 
@@ -168,5 +168,11 @@ A：可以，MIT 许可证。注意 "QR Code" 是 DENSO WAVE INCORPORATED 的注
 
 [MIT](LICENSE) © 2026 QR Code Generator contributors
 
-二维码编码基于 Kazuhiko Arase 的 qrcode-generator（MIT License）。
-感谢 [jsQR](https://github.com/cozmo/jsQR) 用于开发期的解码验证。
+### 第三方组件
+
+| 组件 | 用途 | 许可证 |
+| --- | --- | --- |
+| [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator) | 二维码编码（1.4.4，已内联进 `index.html`） | MIT |
+| [jsQR](https://github.com/cozmo/jsQR) | 开发期扫码验证（不随页面分发） | Apache-2.0 |
+
+二维码编码基于 [Kazuhiko Arase](https://github.com/kazuhikoarase) 的 [qrcode-generator](https://github.com/kazuhikoarase/qrcode-generator)（MIT License）。"QR Code" 是 DENSO WAVE INCORPORATED 的注册商标。
